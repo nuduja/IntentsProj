@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/tv_num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/tv_num1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/tv_num2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_num1" />
+
+    <EditText
+        android:id="@+id/et_n1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/et_n1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_num1"
+        app:layout_constraintStart_toEndOf="@+id/tv_num1" />
+
+    <EditText
+        android:id="@+id/et_n2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/et_n2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_num2"
+        app:layout_constraintStart_toEndOf="@+id/tv_num2" />
+
+    <TextView
+        android:id="@+id/tv_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_n2" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="112dp"
+        android:onClick="add"
+        android:text="@string/btn_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_n2" />
+
+    <Button
+        android:id="@+id/btn_substract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:onClick="substract"
+        android:text="@string/btn_substract"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_add"
+        app:layout_constraintStart_toEndOf="@+id/btn_add" />
+
+    <Button
+        android:id="@+id/btn_multiplication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="68dp"
+        android:onClick="multiply"
+        android:text="@string/btn_multiplication"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add" />
+
+    <Button
+        android:id="@+id/btn_divide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:onClick="divide"
+        android:text="@string/btn_divide"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_multiplication"
+        app:layout_constraintStart_toEndOf="@+id/btn_multiplication" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
